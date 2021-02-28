@@ -1,3 +1,3 @@
 var name = prompt ("Vennligst fyll inn navnet ditt:");
-var welcome = "Hei " + name + " og velkommen til min side. Håper du finner noe du liker.";
-document.write (welcome);
+var welcome = "<p>Hei " + name + " og velkommen til min side. Håper du finner noe du liker.</p>";
+document.write(welcome);
