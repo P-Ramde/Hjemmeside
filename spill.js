@@ -26,15 +26,19 @@ for (var i = 0; i < boxes.children.length; i++)
     }
     //alert(boxes.children[0].className)
     if(winningComboHuman()==true){
-      alert("Gratulerer du vant")
-      return restart()
+      setTimeout(function(){
+        alert("Gratulerer du vant")
+        return restart()
+      },500)
     }
-    if (listNumbers==0){
-      alert("Uavgjort")
-      return restart();
+    if (listNumbers.length==0){
+      setTimeout(function(){
+        alert("Uavgjort")
+        return restart();
+      },500)
     }
     //alert(listNumbers.length)
-    if(listNumbers.length>0)
+    if(listNumbers.length>0 && winningComboHuman() == false)
     {
       var valgt = Math.floor(Math.random()*listNumbers.length)
       //alert("nr i listen " + valgt)
@@ -47,8 +51,10 @@ for (var i = 0; i < boxes.children.length; i++)
       }
     }
     if(winningComboComputer()==true){
-      alert("Du tapte desverre")
-      return restart()
+      setTimeout(function(){
+        alert("Du tapte desverre")
+        return restart()
+      },500)
     }
   })
   // Gjør at det blir en sirkel når musen beveger seg over.
@@ -71,7 +77,7 @@ function winningComboHuman(){
     (boxes.children[1].className == human && boxes.children[4].className == human && boxes.children[7].className == human) ||
     (boxes.children[2].className == human && boxes.children[5].className == human && boxes.children[8].className == human) ||
     (boxes.children[0].className == human && boxes.children[4].className == human && boxes.children[8].className == human) ||
-    (boxes.children[6].className == human && boxes.children[4].className == human && boxes.children[2].className == human)
+    (boxes.children[2].className == human && boxes.children[4].className == human && boxes.children[6].className == human)
   ){
     return true;
   } else {
@@ -81,13 +87,13 @@ function winningComboHuman(){
 function winningComboComputer(){
   if (
     (boxes.children[0].className == computer && boxes.children[1].className == computer && boxes.children[2].className == computer) ||
-    (boxes.children[4].className == computer && boxes.children[4].className == computer && boxes.children[5].className == computer) ||
+    (boxes.children[3].className == computer && boxes.children[4].className == computer && boxes.children[5].className == computer) ||
     (boxes.children[6].className == computer && boxes.children[7].className == computer && boxes.children[8].className == computer) ||
     (boxes.children[0].className == computer && boxes.children[3].className == computer && boxes.children[6].className == computer) ||
     (boxes.children[1].className == computer && boxes.children[4].className == computer && boxes.children[7].className == computer) ||
     (boxes.children[2].className == computer && boxes.children[5].className == computer && boxes.children[8].className == computer) ||
     (boxes.children[0].className == computer && boxes.children[4].className == computer && boxes.children[8].className == computer) ||
-    (boxes.children[6].className == computer && boxes.children[4].className == computer && boxes.children[2].className == computer)
+    (boxes.children[2].className == computer && boxes.children[4].className == computer && boxes.children[6].className == computer)
   ){
     return true;
   } else {
