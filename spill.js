@@ -31,7 +31,7 @@ for (var i = 0; i < boxes.children.length; i++)
         return restart()
       },500)
     }
-    if (listNumbers.length==0 && winnigComboHuman() == false){
+    if (listNumbers.length==0 && winningComboHuman() == false){
       setTimeout(function(){
         alert("Uavgjort")
         return restart();
