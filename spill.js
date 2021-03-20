@@ -29,13 +29,13 @@ for (var i = 0; i < boxes.children.length; i++)
       setTimeout(function(){
         alert("Gratulerer du vant")
         return restart()
-      },500)
+      },100)
     }
     if (listNumbers.length==0){
       setTimeout(function(){
         alert("Uavgjort")
         return restart();
-      },500)
+      },100)
     }
     //alert(listNumbers.length)
     if(listNumbers.length>0 && winningComboHuman() == false)
@@ -54,7 +54,7 @@ for (var i = 0; i < boxes.children.length; i++)
       setTimeout(function(){
         alert("Du tapte desverre")
         return restart()
-      },500)
+      },100)
     }
   })
   // Gjør at det blir en sirkel når musen beveger seg over.
