@@ -1,11 +1,38 @@
 body {
-  background-color: #663399;
+  background-color: #FFFFCC;
   font-family: sans-serif;
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
   width:100%;
   height:100%;
+}
+
+.sidebar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidebar a {
+  display: block;
+}
+
+.buttons {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+}
+
+.button {
+  cursor: pointer;
+  width: 80px;
 }
 
 h1 {
